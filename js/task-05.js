@@ -4,7 +4,7 @@ const nameOutput = document.getElementById("name-output");
 const onInput = ({ target }) => {
   nameOutput.textContent = target.value;
   if (nameInput === "") {
-    nameOutput.textContent = "Anonymus";
+   nameOutput.textContent = "Anonymus";
   }
 };
 nameInput.addEventListener("input", onInput);
