@@ -14,20 +14,27 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-const arr = [];
+
+const elements = images.map(
+  (image) =>
+    `<li><img src="${image.url}" alt="${image.alt}" width="400" height="300"></li>`
+);
+
+gallery.insertAdjacentHTML("beforeend", elements.join(""));
 
 gallery.style.display = "flex";
 gallery.style.listStyle = "none";
 gallery.style.gap = "30px";
 
-for (let i = 0; i < images.length; i += 1) {
-  const newItem = document.createElement("li");
-  const newImg = document.createElement("img");
-  newImg.style.width = "500px";
-  newImg.setAttribute("src", images[i].url);
-  newImg.setAttribute("alt", images[i].alt);
-  newItem.append(newImg);
-  console.log(newItem);
-  arr.push(newItem);
-}
-gallery.append(...arr);
+// const arr = [];
+// for (let i = 0; i < images.length; i += 1) {
+//   const newItem = document.createElement("li");
+//   const newImg = document.createElement("img");
+//   newImg.style.width = "500px";
+//   newImg.setAttribute("src", images[i].url);
+//   newImg.setAttribute("alt", images[i].alt);
+//   newItem.append(newImg);
+//   console.log(newItem);
+//   arr.push(newItem);
+// }
+// gallery.append(...arr);
