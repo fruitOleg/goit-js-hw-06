@@ -16,7 +16,7 @@ const elements = ingredients.map(
 list.insertAdjacentHTML("beforeend", elements.join(""));
 
 
-// 
+
 // const arr = [];
 // 
 // for (let i = 0; i < ingredients.length; i += 1) {
