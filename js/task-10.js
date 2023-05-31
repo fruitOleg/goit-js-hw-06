@@ -9,7 +9,7 @@ const input = document.querySelector("input");
 let amount = 0;
 input.addEventListener("change", onChangeValue);
 createBtn.addEventListener("click", onCreateBtnClick);
-destroyBtn.addEventListener("click", onCreateBtnClick);
+destroyBtn.addEventListener("click", destroyBoxes);
 
 function onChangeValue(event) {
   amount = event.target.value;
